@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <group android:checkableBehavior="all">
+    <item android:title="Antigo Testamento"
+        android:icon="@drawable/ic_menu_search"
+        app:showAsAction="never">
+
+
+        <menu>
+
+            <group android:id="@+id/gp_item1"
+                android:checkableBehavior="single">
+
+            <item android:id="@+id/nav_genesis"             android:title="@string/genesis"     />
+            <item android:id="@+id/nav_exodo"               android:title="@string/exodo"        />
+            <item android:id="@+id/nav_levitico"            android:title="@string/levitico"     />
+            <item android:id="@+id/nav_numeros"             android:title="@string/numeros"      />
+            <item android:id="@+id/nav_deuteronomio"        android:title="@string/deuteronomio" />
+            <item android:id="@+id/nav_josue" 				android:title="@string/josue" 		 />
+            <item android:id="@+id/nav_juizes" 				android:title="@string/juizes" 		 />
+            <item android:id="@+id/nav_rute" 				android:title="@string/rute" 		 />
+            <item android:id="@+id/nav_isamuel" 			android:title="@string/isamuel" 	 />
+            <item android:id="@+id/nav_iisamuel" 			android:title="@string/iisamuel" 	 />
+            <item android:id="@+id/nav_ireis" 				android:title="@string/ireis" 		 />
+            <item android:id="@+id/nav_iireis" 				android:title="@string/iireis" 		 />
+            <item android:id="@+id/nav_icronicas" 			android:title="@string/icronicas" 	 />
+            <item android:id="@+id/nav_iicronicas" 			android:title="@string/iicronicas" 	 />
+            <item android:id="@+id/nav_esdras" 				android:title="@string/esdras" 		 />
+            <item android:id="@+id/nav_neemias" 			android:title="@string/neemias" 	 />
+            <item android:id="@+id/nav_ester" 				android:title="@string/ester" 		 />
+            <item android:id="@+id/nav_jo" 					android:title="@string/jo" 			 />
+            <item android:id="@+id/nav_salmos" 				android:title="@string/salmos" 		 />
+            <item android:id="@+id/nav_proverbios" 			android:title="@string/proverbios" 	 />
+            <item android:id="@+id/nav_eclesiastes" 		android:title="@string/eclesiastes"  />
+            <item android:id="@+id/nav_canticos" 			android:title="@string/canticos" 	 />
+            <item android:id="@+id/nav_isaias" 				android:title="@string/isaias" 		 />
+            <item android:id="@+id/nav_jeremias" 			android:title="@string/jeremias" 	 />
+            <item android:id="@+id/nav_lamentacoes" 		android:title="@string/lamentacoes"  />
+            <item android:id="@+id/nav_ezequiel" 			android:title="@string/ezequiel" 	 />
+            <item android:id="@+id/nav_daniel" 				android:title="@string/daniel" 		 />
+            <item android:id="@+id/nav_oseias" 				android:title="@string/oseias" 		 />
+            <item android:id="@+id/nav_joel" 				android:title="@string/joel" 		 />
+            <item android:id="@+id/nav_obadias" 			android:title="@string/obadias" 	 />
+            <item android:id="@+id/nav_jonas" 				android:title="@string/jonas" 		 />
+            <item android:id="@+id/nav_miqueias" 			android:title="@string/miqueias" 	 />
+            <item android:id="@+id/nav_naum" 				android:title="@string/naum" 		 />
+            <item android:id="@+id/nav_habacuque" 			android:title="@string/habacuque" 	 />
+            <item android:id="@+id/nav_sofonias" 			android:title="@string/sofonias" 	 />
+            <item android:id="@+id/nav_ageu" 				android:title="@string/ageu" 		 />
+            <item android:id="@+id/nav_zacarias" 			android:title="@string/zacarias" 	 />
+            <item android:id="@+id/nav_amos" 				android:title="@string/amos" 		 />
+            <item android:id="@+id/nav_malaquias" 			android:title="@string/malaquias" 	 />
+
+            </group>
+        </menu>
+    </item>
+
+
+
+    <item android:title="Novo Testamento"
+
+        android:icon="@drawable/ic_menu_search"
+        app:showAsAction="never"
+        >
+        <menu>
+            <group android:id="@+id/gp_item2"
+                android:checkableBehavior="single"
+                android:visible="true">
+
+            <item android:id="@+id/nav_mateus" 				android:title="@string/mateus" 				/>
+            <item android:id="@+id/nav_marcos" 				android:title="@string/marcos" 				/>
+            <item android:id="@+id/nav_lucas" 				android:title="@string/lucas" 				/>
+            <item android:id="@+id/nav_joao" 				android:title="@string/joao" 				/>
+            <item android:id="@+id/nav_atos" 				android:title="@string/atos" 				/>
+            <item android:id="@+id/nav_romanos" 			android:title="@string/romanos" 			/>
+            <item android:id="@+id/nav_icorintios" 			android:title="@string/icorintios" 			/>
+            <item android:id="@+id/nav_iicorintios" 		android:title="@string/iicorintios" 		/>
+            <item android:id="@+id/nav_galatas" 			android:title="@string/galatas" 			/>
+            <item android:id="@+id/nav_efesios" 			android:title="@string/efesios" 			/>
+            <item android:id="@+id/nav_filipenses" 			android:title="@string/filipenses" 			/>
+            <item android:id="@+id/nav_colossenses" 		android:title="@string/colossenses" 		/>
+            <item android:id="@+id/nav_itessalonicenses" 	android:title="@string/itessalonicenses" 	/>
+            <item android:id="@+id/nav_iitessalonicenses" 	android:title="@string/iitessalonicenses" 	/>
+            <item android:id="@+id/nav_itimoteo" 			android:title="@string/itimoteo" 			/>
+            <item android:id="@+id/nav_iitimoteo" 			android:title="@string/iitimoteo" 			/>
+            <item android:id="@+id/nav_tito" 				android:title="@string/tito" 				/>
+            <item android:id="@+id/nav_filemom" 			android:title="@string/filemom" 			/>
+            <item android:id="@+id/nav_hebreus" 			android:title="@string/hebreus" 			/>
+            <item android:id="@+id/nav_tiago" 				android:title="@string/tiago" 				/>
+            <item android:id="@+id/nav_ipedro" 				android:title="@string/ipedro" 				/>
+            <item android:id="@+id/nav_iipedro" 			android:title="@string/iipedro" 			/>
+            <item android:id="@+id/nav_ijoao"  				android:title="@string/ijoao"  				/>
+            <item android:id="@+id/nav_iijoao" 				android:title="@string/iijoao" 				/>
+            <item android:id="@+id/nav_iiijoao"    			android:title="@string/iiijoao"    			/>
+            <item android:id="@+id/nav_judas"      			android:title="@string/judas"      			/>
+            <item android:id="@+id/nav_apocalipse" 			android:title="@string/apocalipse" 			/>
+
+            </group>
+
+
+        </menu>
+    </item>
+</group>
+</menu>

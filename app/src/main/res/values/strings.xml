@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">Biblia</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="action_livro">Selecione um livro</string>
+
+    <string name="genesis">Gênesis</string>
+    <string name="exodo">Êxodo</string>
+    <string name="deuteronomio">Deuteronômio</string>
+    <string name="levitico">Levítico</string>
+    <string name="numeros">Números</string>
+    <string name="josue">Josué</string>
+    <string name="juizes">Juízes</string>
+    <string name="rute">Rute</string>
+    <string name="isamuel">I Samuel</string>
+    <string name="iisamuel">I Samuel</string>
+    <string name="ireis">II Samuel</string>
+    <string name="iireis">I Reis</string>
+    <string name="icronicas">II Reis</string>
+    <string name="iicronicas">I Crônicas</string>
+    <string name="esdras">Esdras</string>
+    <string name="neemias">Neemias</string>
+    <string name="ester">Ester</string>
+    <string name="jo">Jó</string>
+    <string name="salmos">Salmos</string>
+    <string name="proverbios">Provérbios</string>
+    <string name="eclesiastes">Eclesiastes</string>
+    <string name="canticos">Cânticos dos Cânticos</string>
+    <string name="isaias">Isaías</string>
+    <string name="jeremias">Jeremias</string>
+    <string name="lamentacoes">Lamentações</string>
+    <string name="ezequiel">Ezequiel</string>
+    <string name="daniel">Daniel</string>
+    <string name="oseias">Oséias</string>
+    <string name="joel">Joel</string>
+    <string name="obadias">Obadias</string>
+    <string name="jonas">Jonas</string>
+    <string name="miqueias">Miquéias</string>
+    <string name="naum">Naum</string>
+    <string name="habacuque">Habacuque</string>
+    <string name="sofonias">Sofonias</string>
+    <string name="ageu">Ageu</string>
+    <string name="zacarias">Zacarias</string>
+    <string name="malaquias">Malaquias</string>
+    <string name="amos">Amós</string>
+    <string name="mateus">Mateus</string>
+    <string name="marcos">Marcos</string>
+    <string name="lucas">Lucas</string>
+    <string name="joao">João</string>
+    <string name="atos">Atos dos Apóstolos</string>
+    <string name="romanos">Romanos</string>
+    <string name="icorintios">I Coríntios</string>
+    <string name="iicorintios">II Corintios</string>
+    <string name="galatas">galatas</string>
+    <string name="efesios">Efésios</string>
+    <string name="filipenses">Filipenses</string>
+    <string name="colossenses">Colossenses</string>
+    <string name="itessalonicenses">I Tessalonicenses</string>
+    <string name="iitessalonicenses">II Tessalonicenses</string>
+    <string name="itimoteo">I Timóteo</string>
+    <string name="iitimoteo">II Timóteo</string>
+    <string name="tito">Tito</string>
+    <string name="filemom">Filemom</string>
+    <string name="hebreus">Hebreus</string>
+    <string name="tiago">Tiago</string>
+    <string name="ipedro">I Pedro</string>
+    <string name="iipedro">II Pedro</string>
+    <string name="ijoao">I João</string>
+    <string name="iijoao">II João</string>
+    <string name="iiijoao">III João</string>
+    <string name="judas">Judas</string>
+    <string name="apocalipse">Apocalipse</string>
+</resources>
