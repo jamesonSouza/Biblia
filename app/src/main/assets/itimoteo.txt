@@ -1,121 +1,139 @@
+﻿
+Primeira Carta de Paulo a Timóteo
 
-I TIMÓTEO
 »I TIMóTEO [1]
-1 Paulo, apóstolo de Cristo Jesus, segundo o mandado de Deus, nosso Salvador, e de Cristo Jesus, esperança nossa.
-2 a Timóteo, meu verdadeiro filho na fé: graça, misericórdia e paz da parte de Deus Pai e de Cristo Jesus, nosso Senhor.
-3 Como te roguei, quando partia para a Macedônia, que ficasse em Éfeso, para advertires a alguns que não ensinassem doutrina diversa,
-4 nem se preocupassem com fábulas ou genealogias intermináveis, pois que produzem antes discussões que edificação para com Deus, que se funda na fé...
-5 Mas o fim desta admoestação é o amor que procede de um coração puro, de uma boa consciência, e de uma fé não fingida;
-6 das quais coisas alguns se desviaram, e se entregaram a discursos vãos,
-7 querendo ser doutores da lei, embora não entendam nem o que dizem nem o que com tanta confiança afirmam.
-8 Sabemos, porém, que a lei é boa, se alguém dela usar legitimamente,
-9 reconhecendo que a lei não é feita para o justo, mas para os transgressores e insubordinados, os irreverentes e pecadores, os ímpios e profanos, para os parricidas, matricidas e homicidas,
-10 para os devassos, os sodomitas, os roubadores de homens, os mentirosos, os perjuros, e para tudo que for contrário à sã doutrina,
-11 segundo o evangelho da glória do Deus bendito, que me foi confiado.
-12 Dou graças àquele que me fortaleceu, a Cristo Jesus nosso Senhor, porque me julgou fiel, pondo-me no seu ministério,
-13 ainda que outrora eu era blasfemador, perseguidor, e injuriador; mas alcancei misericórdia, porque o fiz por ignorância, na incredulidade;
-14 e a graça de nosso Senhor superabundou com a fé e o amor que há em Cristo Jesus.
-15 Fiel é esta palavra e digna de toda a aceitação; que Cristo Jesus veio ao mundo para salvar os pecadores, dos quais sou eu o principal;
-16 mas por isso alcancei misericórdia, para que em mim, o principal, Cristo Jesus mostrasse toda a sua longanimidade, a fim de que eu servisse de exemplo aos que haviam de crer nele para a vida eterna.
-17 Ora, ao Rei dos séculos, imortal, invisível, ao único Deus, seja honra e glória para todo o sempre. Amém.
-18 Esta admoestação te dirijo, filho Timóteo, que segundo as profecias que houve acerca de ti, por elas pelejes a boa peleja,
-19 conservando a fé, e uma boa consciência, a qual alguns havendo rejeitado, naufragando no tocante à fé;
-20 e entre esses Himeneu e Alexandre, os quais entreguei a Satanás, para que aprendam a não blasfemar.
+
+1. Paulo, apóstolo de Jesus Cristo segundo o mandado de Deus nosso Salvador, e do Senhor Jesus Cristo, nossa esperança.
+2. Para Timóteo, [meu] verdadeiro filho na fé. [Haja em ti] graça, misericórdia [e] paz de Deus nosso Pai, e de Cristo Jesus nosso Senhor.
+3. Assim como te roguei quando eu ia para a Macedônia, que ficasse em Éfeso, [assim também faço agora], para que mandes a alguns não ensinarem outra doutrina;
+4. Nem se detenham a mitos, nem a genealogias intermináveis, que mais produzem questionamentos do que a edificação de Deus na fé.
+5. Mas o fim do mandamento é o amor [proveniente] de um coração puro, e de uma boa consciência, e de uma fé não fingida;
+6. Das quais, tendo alguns se desviado, voltaram-se para o vão uso de palavras;
+7. Querendo ser mestres da Lei, [e] não entendendo, nem o que dizem, nem o que confirmam.
+8. Mas nós sabemos que a Lei é boa, se alguém usá-la dela legitimamente;
+9. Sabendo isto: que a Lei não é posta para o justo, mas sim para os injustos e insubordinados, para os perversos e pecadores, para os maus e profanos, para os matam os pais e as mães, para os homicidas,
+10. Para os que cometem pecados sexuais, para os machos que se deitam com machos, para os que capturam pessoas para escravizá-las, para os mentirosos, para os que juram falsamente, e os que fazem alguma outra coisa contrária à sã doutrina,
+11. Segundo o Evangelho da glória do bem-aventurado Deus, que foi confiado a mim.
+12. E eu dou graças ao que tem me fortalecido, a Cristo Jesus nosso Senhor, que me considerou fiel, pondo[-me] neste trabalho.
+13. [Eu] que antes era um blasfemador e perseguidor, e opressor; porém me foi feita misericórdia, porque agi com infidelidade por ignorância.
+14. Mas a graça de nosso Senhor Jesus Cristo foi ainda mais abundante, com a fé e amor que há em Cristo Jesus.
+15. Esta é uma palavra fiel e digna de toda aceitação: que Cristo Jesus veio ao mundo para salvar os pecadores, dos quais eu sou o principal.
+16. Mas por isso me foi feita misericórdia, para que Jesus Cristo em mim, que sou o principal [pecador], mostrasse toda a sua grande paciência como exemplo para os que nele vierem a crer para a vida eterna;
+17. E ao Rei de todos os tempos, incorruptível, invisível, o único Deus sábio, [seja] a honra, e glória, para todo o sempre, amém!
+18. Eu te ordeno este mandamento, Timóteo [meu] filho, que segundo as profecias anteriormente feitas quanto a ti, batalhes nelas a boa batalha;
+19. Retendo a fé, a boa consciência, a qual alguns, rejeitando, naufragaram da fé.
+20. Dentre os quais está Himeneu e Alexandre, os quais eu entreguei a Satanás, para que aprendam a não [mais] blasfemar.
+
 »I TIMóTEO [2]
-1 Exorto, pois, antes de tudo que se façam súplicas, orações, intercessões, e ações de graças por todos os homens,
-2 pelos reis, e por todos os que exercem autoridade, para que tenhamos uma vida tranqüila e sossegada, em toda a piedade e honestidade.
-3 Pois isto é bom e agradável diante de Deus nosso Salvador,
-4 o qual deseja que todos os homens sejam salvos e cheguem ao pleno conhecimento da verdade.
-5 Porque há um só Deus, e um só Mediador entre Deus e os homens, Cristo Jesus, homem,
-6 o qual se deu a si mesmo em resgate por todos, para servir de testemunho a seu tempo;
-7 para o que (digo a verdade, não minto) eu fui constituído pregador e apóstolo, mestre dos gentios na fé e na verdade.
-8 Quero, pois, que os homens orem em todo lugar, levantando mãos santas, sem ira nem contenda.
-9 Quero, do mesmo modo, que as mulheres se ataviem com traje decoroso, com modéstia e sobriedade, não com tranças, ou com ouro, ou pérolas, ou vestidos custosos,
-10 mas (como convém a mulheres que fazem profissão de servir a Deus) com boas obras.
-11 A mulher aprenda em silêncio com toda a submissão.
-12 Pois não permito que a mulher ensine, nem tenha domínio sobre o homem, mas que esteja em silêncio.
-13 Porque primeiro foi formado Adão, depois Eva.
-14 E Adão não foi enganado, mas a mulher, sendo enganada, caiu em transgressão;
-15 salvar-se-á, todavia, dando à luz filhos, se permanecer com sobriedade na fé, no amor e na santificação.
+
+1. Portanto eu te exorto para que se façam pedidos, orações, intercessões [e] ações de graça por todos os homens;
+2. Pelos reis, e [por] todos os que estão em posição superior, para que tenhamos uma vida quieta e sossegada, em toda santidade e respeitabilidade.
+3. Porque isto é bom e agradável diante de Deus nosso Salvador;
+4. O qual quer que todos os homens se salvem e venham a conhecer a verdade.
+5. Porque há um só Deus, e um só mediador entre Deus e os homens: o homem Cristo Jesus;
+6. O qual deu a si mesmo [como] resgate por todos, [dando] testemunho a seu tempo;
+7. Para o qual eu fui posto como pregador e apóstolo (eu estou dizendo a verdade em Cristo, não mentindo) instrutor dos gentios em fé e verdade.
+8. Portanto eu quero que os homens orem em todo lugar, levantando mãos santas, sem ira nem discussão.
+9. Semelhantemente também, que as mulheres se adornem com roupa respeitável, com pudor e prudência, não com cabelo trançado, ou ouro, ou pérolas, ou roupas caras;
+10. Mas sim com o que é conveniente para mulheres que declaram servir a Deus: com boas obras.
+11. A mulher aprenda sem alta voz, com toda submissão.
+12. Mas não permito que a mulher ensine, nem use de autoridade sobre o homem, mas sim que esteja em silêncio.
+13. Porque Adão foi formado primeiro, [e] depois Eva.
+14. E Adão não foi enganado; mas a mulher, sendo enganada, caiu em transgressão.
+15. Mas ela se salvará tendo filhos, se permanecer na fé, amor e santificação com prudência.
+
 »I TIMóTEO [3]
-1 Fiel é esta palavra: Se alguém aspira ao episcopado, excelente obra deseja.
-2 É necessário, pois, que o bispo seja irrepreensível, marido de uma só mulher, temperante, sóbrio, ordeiro, hospitaleiro, apto para ensinar;
-3 não dado ao vinho, não espancador, mas moderado, inimigo de contendas, não ganancioso;
-4 que governe bem a sua própria casa, tendo seus filhos em sujeição, com todo o respeito
-5 (pois, se alguém não sabe governar a sua própria casa, como cuidará da igreja de Deus?);
-6 não neófito, para que não se ensoberbeça e venha a cair na condenação do Diabo.
-7 Também é necessário que tenha bom testemunho dos que estão de fora, para que não caia em opróbrio, e no laço do Diabo.
-8 Da mesma forma os diáconos sejam sérios, não de língua dobre, não dados a muito vinho, não cobiçosos de torpe ganância,
-9 guardando o mistério da fé numa consciência pura.
-10 E também estes sejam primeiro provados, depois exercitem o diaconato, se forem irrepreensíveis.
-11 Da mesma sorte as mulheres sejam sérias, não maldizentes, temperantes, e fiéis em tudo.
-12 Os diáconos sejam maridos de uma só mulher, e governem bem a seus filhos e suas próprias casas.
-13 Porque os que servirem bem como diáconos, adquirirão para si um lugar honroso e muita confiança na fé que há em Cristo Jesus.
-14 Escrevo-te estas coisas, embora esperando ir ver-te em breve,
-15 para que, no caso de eu tardar, saibas como se deve proceder na casa de Deus, a qual é a igreja do Deus vivo, coluna e esteio da verdade.
-16 E, sem dúvida alguma, grande é o mistério da piedade: Aquele que se manifestou em carne, foi justificado em espírito, visto dos anjos, pregado entre os gentios, crido no mundo, e recebido acima na glória.
+
+1. [Esta] palavra é fiel: se alguém deseja ser supervisor, deseja uma excelente obra.
+{supervisor = equiv. bispo – também v. 2}
+2. Convém, portanto, que o supervisor seja irrepreensível, marido de uma mulher, sóbrio, prudente, de comportamento decente, hospitaleiro, apto para ensinar;
+3. Não dado ao vinho, não violento, não ganancioso, mas sim moderado, não disposto a brigas, sem cobiça pelo dinheiro;
+4. que governe bem sua própria casa, tendo a [seus] filhos em sujeição com toda dignidade.
+5. (Porque se alguém não sabe governar sua própria casa, como cuidará da igreja de Deus?)
+6. Não novo [na fé]; para que não fique arrogante e caia na condenação do diabo.
+7. É necessário também que tenha bom testemunho dos que estão de fora, para que não caia em reprovação e [em] laço do diabo.
+8. Semelhantemente os servidores [sejam] respeitáveis, não [mentirosos] de duas conversas, não dados a muito vinho, não cobiçosos de ganância,
+{servidores = equiv. diáconos}
+9. retendo o mistério da fé em uma pura consciência.
+10. E estes também sejam primeiro provados, [e] depois sirvam, aqueles que forem irrepreensíveis.
+11. Semelhantemente as mulheres [sejam] respeitáveis, não maldizentes, sóbrias, [e] fiéis em todas as coisas.
+12. Os diáconos sejam maridos de uma mulher, que governem bem [seus] filhos, e suas próprias casas.
+13. Porque os que servirem bem, obtêm para si um bom conceito, e muita confiança na fé que há em Cristo Jesus.
+14. Eu te escrevo estas coisas esperando que em breve eu venha a ti;
+15. Mas seu eu demorar, para que saibais como se deve andar na casa de Deus, que é a igreja do Deus vivo, a coluna e alicerce da verdade.
+16. E sem dúvida nenhuma, grande é o mistério da santidade: Deus foi manifesto em carne, justificado em Espírito, visto pelos anjos, anunciado aos gentios, crido no mundo, [e] recebido acima em glória.
+
 »I TIMóTEO [4]
-1 Mas o Espírito expressamente diz que em tempos posteriores alguns apostatarão da fé, dando ouvidos a espíritos enganadores, e a doutrinas de demônios,
-2 pela hipocrisia de homens que falam mentiras e têm a sua própria consciência cauterizada,
-3 proibindo o casamento, e ordenando a abstinência de alimentos que Deus criou para serem recebidos com ações de graças pelos que são fiéis e que conhecem bem a verdade;
-4 pois todas as coisas criadas por Deus são boas, e nada deve ser rejeitado se é recebido com ações de graças;
-5 porque pela palavra de Deus e pela oração são santificadas.
-6 Propondo estas coisas aos irmãos, serás bom ministro de Cristo Jesus, nutrido pelas palavras da fé e da boa doutrina que tens seguido;
-7 mas rejeita as fábulas profanas e de velhas. Exercita-te a ti mesmo na piedade.
-8 Pois o exercício corporal para pouco aproveita, mas a piedade para tudo é proveitosa, visto que tem a promessa da vida presente e da que há de vir.
-9 Fiel é esta palavra e digna de toda aceitação.
-10 Pois para isto é que trabalhamos e lutamos, porque temos posto a nossa esperança no Deus vivo, que é o Salvador de todos os homens, especialmente dos que crêem.
-11 Manda estas coisas e ensina-as.
-12 Ninguém despreze a tua mocidade, mas sê um exemplo para os fiéis na palavra, no procedimento, no amor, na fé, na pureza.
-13 até que eu vá, aplica-te à leitura, à exortação, e ao ensino.
-14 Não negligencies o dom que há em ti, o qual te foi dado por profecia, com a imposição das mãos do presbítero.
-15 Ocupa-te destas coisas, dedica-te inteiramente a elas, para que o teu progresso seja manifesto a todos.
-16 Tem cuidado de ti mesmo e do teu ensino; persevera nestas coisas; porque, fazendo isto, te salvarás, tanto a ti mesmo como aos que te ouvem.
+
+1. Mas o Espírito diz expressamente que nos últimos tempos alguns se afastarão da fé, dando atenção a espíritos enganadores, e a doutrina de demônios.
+2. Pela hipocrisia de faladores de mentiras, tendo cauterizado sua própria consciência;
+3. Proibindo se casar, e [mandando] se abster das comidas que Deus criou para os fiéis e para os que conheceram a verdade para as receberem com ações de graças.
+4. Porque toda criatura de Deus é boa, e [não há] nada para se rejeitar, se for tomada com ações de graças.
+5. Porque ela é santificada pela palavra de Deus e [pela] oração.
+6. Se tu propores estas coisas aos irmãos, tu serás bom trabalhador a serviço de Jesus Cristo, nutrido pelas palavras da fé, e de boa doutrina, as quais tu tens seguido.
+7. Mas rejeita os mitos profanos e [histórias] de velhas; e exercita a ti mesmo em santificação.
+8. Porque o exercício corporal tem pouco proveito; mas a santificação é proveitosa para tudo, tendo as promessas da vida atual e da futura.
+9. [Esta] palavra é fiel, e digna de toda aceitação.
+10. Porque para isto também trabalhamos e somos insultados, porque esperamos o Deus vivo, que é o Salvador de todos os homens, e em especial dos crentes.
+11. Ordena e ensina tu estas coisas
+12. Ninguém te despreze por seres jovem, mas sim, sê exemplo para os crentes, em palavra, em comportamento, em amor, em espírito, em fé, [e] em pureza.
+13. Persiste na leitura, na exortação e no ensino, até que eu venha.
+14. Não desprezes o dom que está em ti, o qual te foi dado por profecia, com a imposição das mãos dos presbíteros.
+15. Medita [n]estas coisas, [e] nelas te ocupa; para que teu aperfeiçoamento seja visível por todos.
+16. Tem cuidado de ti mesmo, e da doutrina; persevera nestas coisas; porque, se ao fazer isto, tu salvarás tanto a ti mesmo, como aos que te ouvem.
+
 »I TIMóTEO [5]
-1 Não repreendas asperamente a um velho, mas admoesta-o como a um pai; aos moços, como a irmãos;
-2 às mulheres idosas, como a mães; às moças, como a irmãs, com toda a pureza.
-3 Honra as viúvas que são verdadeiramente viúvas.
-4 Mas, se alguma viúva tiver filhos, ou netos, aprendam eles primeiro a exercer piedade para com a sua própria família, e a recompensar seus progenitores; porque isto é agradável a Deus.
-5 Ora, a que é verdadeiramente viúva e desamparada espera em Deus, e persevera de noite e de dia em súplicas e orações;
-6 mas a que vive em prazeres, embora viva, está morta.
-7 Manda, pois, estas coisas, para que elas sejam irrepreensíveis.
-8 Mas, se alguém não cuida dos seus, e especialmente dos da sua família, tem negado a fé, e é pior que um incrédulo.
-9 Não seja inscrita como viúva nenhuma que tenha menos de sessenta anos, e só a que tenha sido mulher de um só marido,
-10 aprovada com testemunho de boas obras, se criou filhos, se exercitou hospitalidade, se lavou os pés aos santos, se socorreu os atribulados, se praticou toda sorte de boas obras.
-11 Mas rejeita as viúvas mais novas, porque, quando se tornam levianas contra Cristo, querem casar-se;
-12 tendo já a sua condenação por haverem violado a primeira fé;
-13 e, além disto, aprendem também a ser ociosas, andando de casa em casa; e não somente ociosas, mas também faladeiras e intrigantes, falando o que não convém.
-14 Quero pois que as mais novas se casem, tenham filhos, dirijam a sua casa, e não dêem ocasião ao adversário de maldizer;
-15 porque já algumas se desviaram, indo após Satanás.
-16 Se alguma mulher crente tem viúvas, socorra-as, e não se sobrecarregue a igreja, para que esta possa socorrer as que são verdadeiramente viúvas.
-17 Os anciãos que governam bem sejam tidos por dignos de duplicada honra, especialmente os que labutam na pregação e no ensino.
-18 Porque diz a Escritura: Não atarás a boca ao boi quando debulha. E: Digno é o trabalhador do seu salário.
-19 Não aceites acusação contra um ancião, senão com duas ou três testemunhas.
-20 Aos que vivem no pecado, repreende-os na presença de todos, para que também os outros tenham temor.
-21 Conjuro-te diante de Deus, e de Cristo Jesus, e dos anjos eleitos, que sem prevenção guardes estas coisas, nada fazendo com parcialidade.
-22 A ninguém imponhas precipitadamente as mãos, nem participes dos pecados alheios; conserva-te a ti mesmo puro.
-23 Não bebas mais água só, mas usa um pouco de vinho, por causa do teu estômago e das tuas freqüentes enfermidades.
-24 Os pecados de alguns homens são manifestos antes de entrarem em juízo, enquanto os de outros descobrem-se depois.
-25 Da mesma forma também as boas obras são manifestas antecipadamente; e as que não o são não podem ficar ocultas.
+
+1. Não repreendas asperamente aos velhos, mas advirta[-os] como a pais; aos rapazes, como a irmãos;
+2. E às [mais] velhas, como a mães; e as moças, como a irmãs, em toda pureza.
+3. Honra às viúvas que verdadeiramente são viúvas.
+4. Mas se alguma viúva tiver filhos, ou netos, aprendam primeiro a exercitar piedade para com sua própria casa, e a recompensar a seus pais; porque isto é bom e agradável diante de Deus.
+5. E a que é verdadeiramente viúva, e deixada sozinha, espera em Deus, e persevera de noite e de dia em rogos e orações.
+6. Mas a que segue sua sensualidade, [ainda que esteja] vivendo, está morta.
+7. Ordena pois estas coisas, para que sejam irrepreensíveis.
+8. Mas se alguém não tem cuidado dos seus, e principalmente dos de sua própria casa, [então] tem negado a fé, e é pior que o incrédulo.
+9. A viúva, para ser registrada, não [deve ter] menos de sessenta anos, [e] que tenha sido mulher de um marido.
+10. Tendo testemunho de boas obras, se criou filhos, se foi hospitaleira, se lavou os pés dos santos, se socorreu aos aflitos, se seguiu em toda boa obra.
+11. Mas não admitas as viúvas mais jovens; porque, quando tiverem desejos sensuais contra Cristo, elas querem se casar;
+12. Tendo [já] a condenação [delas], por elas terem anulado [sua] primeira fé.
+13. E ao mesmo tempo também aprendem ociosamente a andar de casa em casa; e não somente ociosas, mas também fofoqueiras e curiosas, falando o que não se deve.
+14. Quero, portanto, que as mais jovens se casem, gerem filhos, administrem a casa, [e] não deem nenhuma oportunidade para o adversário ao maldizer.
+15. Porque algumas já se desviaram, [indo] atrás de Satanás.
+16. Se algum crente ou alguma crente tem viúvas, presta assistência a elas, e não passe a responsabilidade para a igreja, para que [a igreja] possa prestar assistência às que verdadeiramente são viúvas.
+17. Os presbíteros [ou seja, os anciãos] que lideram bem, sejam estimados como dignos de honra dobrada, principalmente os que trabalham na palavra e [na] doutrina.
+18. Porque a Escritura diz:
+ Ao boi que estiver debulhando, não amarrarás a boca;
+e:
+ Digno é o trabalhador de seu salário.
+19. Não aceites acusação contra o presbítero, a não ser com duas ou três testemunhas.
+20. Aos que pecarem, repreenda[-os] na presença de todos, para que os outros também tenham temor.
+21. Eu [te] ordeno sob juramento, diante de Deus, e do Senhor Jesus Cristo, e dos anjos escolhidos, que guardes estas coisas sem prejulgamentos, fazendo nada por favoritismo.
+22. A ninguém imponhas as mãos apressadamente, nem sejas coparticipante em pecados alheios; conserva puro a ti mesmo.
+23. Não bebas mais [somente] água, mas usa [também] de um pouco de vinho, por causa do teu estômago, e de tuas frequentes enfermidades.
+24. Os pecados de alguns homens são claramente manifestos, e vão adiante [deles] para [sua] condenação, mas para alguns, eles seguem depois.
+25. Semelhantemente também as boas obras são manifestas com antecedência; e as que são de outra maneira não podem se esconder.
 »I TIMóTEO [6]
-1 Todos os servos que estão debaixo do jugo considerem seus senhores dignos de toda honra, para que o nome de Deus e a doutrina não sejam blasfemados.
-2 E os que têm senhores crentes não os desprezem, porque são irmãos; antes os sirvam melhor, porque eles, que se utilizam do seu bom serviço, são crentes e amados. Ensina estas coisas.
-3 Se alguém ensina alguma doutrina diversa, e não se conforma com as sãs palavras de nosso Senhor Jesus Cristo, e com a doutrina que é segundo a piedade,
-4 é soberbo, e nada sabe, mas delira acerca de questões e contendas de palavras, das quais nascem invejas, porfias, injúrias, suspeitas maliciosas,
-5 disputas de homens corruptos de entendimento, e privados da verdade, cuidando que a piedade é fonte de lucro;
-6 e, de fato, é grande fonte de lucro a piedade com o contentamento.
-7 Porque nada trouxe para este mundo, e nada podemos daqui levar;
-8 tendo, porém, alimento e vestuário, estaremos com isso contentes.
-9 Mas os que querem tornar-se ricos caem em tentação e em laço, e em muitas concupiscências loucas e nocivas, as quais submergem os homens na ruína e na perdição.
-10 Porque o amor ao dinheiro é raiz de todos os males; e nessa cobiça alguns se desviaram da fé, e se traspassaram a si mesmos com muitas dores.
-11 Mas tu, ó homem de Deus, foge destas coisas, e segue a justiça, a piedade, a fé, o amor, a constância, a mansidão.
-12 Peleja a boa peleja da fé, apodera-te da vida eterna, para a qual foste chamado, tendo já feito boa confissão diante de muitas testemunhas.
-13 Diante de Deus, que todas as coisas vivifica, e de Cristo Jesus, que perante Pôncio Pilatos deu o testemunho da boa confissão, exorto-te
-14 a que guardes este mandamento sem mácula e irrepreensível até a vinda de nosso Senhor Jesus Cristo;
-15 a qual, no tempo próprio, manifestará o bem-aventurado e único soberano, Rei dos reis e Senhor dos senhores;
-16 aquele que possui, ele só, a imortalidade, e habita em luz inacessível; a quem nenhum dos homens tem visto nem pode ver; ao qual seja honra e poder sempiterno. Amém.
-17 manda aos ricos deste mundo que não sejam altivos, nem ponham a sua esperança na incerteza das riquezas, mas em Deus, que nos concede abundantemente todas as coisas para delas gozarmos;
-18 que pratiquem o bem, que se enriqueçam de boas obras, que sejam liberais e generosos,
-19 entesourando para si mesmos um bom fundamento para o futuro, para que possam alcançar a verdadeira vida.
-20 Ó Timóteo, guarda o depósito que te foi confiado, evitando as conversas vãs e profanas e as oposições da falsamente chamada ciência;
-21 a qual professando-a alguns, se desviaram da fé. A graça seja convosco.
+
+1. Todos os servos, que estão debaixo de jugo, estimem a seus próprios senhores como dignos de toda honra; para que o nome de Deus e [sua] doutrina não sejam blasfemados.
+2. E os que tem Senhores crentes, não os desprezem, por serem irmãos; mas sim, muito mais os sirvam, porque aqueles que recebem este benefício são crentes e amados. Ensina e exorta estas coisas.
+3. Se alguém ensina de outra maneira, e não concorda com as sãs palavras de nosso Senhor Jesus Cristo, e com a doutrina que é conforme à devoção [a Deus];
+4. [e] é presunçoso, e nada sabe, mas se interessa de forma doentia por questões e disputas de palavras, das quais nascem invejas, brigas, blasfêmias, suspeitas maldosas,
+5. Perversas discussões de homens corruptos de entendimento, e privados da verdade, pensando que a devoção [a Deus] é [um meio de se obter] lucro. Afasta-te dos tais.
+6. Mas a devoção [a Deus] com contentamento é um grande lucro.
+7. Porque nada trouxemos ao mundo, e [nos é] conhecido que nada podemos levar dele.
+8. Mas tendo alimento, e algo para nos cobrirmos, estejamos contentes com isso.
+9. Mas os que querem se enriquecer caem em tentação, e [em] armadilha, e [em] muitas loucos e nocivos maus desejos, que afundam os homens em perdição e ruína.
+10. Porque o amor ao dinheiro é a raiz de todos os males; pelo qual, alguns cobiçando, desviaram-se da fé, e perfuraram a si mesmos com muitas dores.
+11. Mas tu, ó homem de Deus, foge destas coisas, e segue a justiça, a devoção [a Deus], a fé, o amor, a paciência [e] a mansidão.
+12. Luta tu a boa luta da fé; agarra a vida eterna, para a qual também és chamado, e [já] confessaste a boa confissão diante de muitas testemunhas.
+13. Eu te mando, diante de Deus que vivifica todas as coisas, e de Cristo Jesus, que testemunhou a boa confissão diante de Pôncio Pilatos,
+14. Que guardes este mandamento irrepreensível, sem nenhuma mancha [de erro], até o aparecimento de nosso Senhor Jesus Cristo.
+15. A qual ao seus tempos [devidos] mostrará o bem-aventurado e único poderoso Senhor, Rei dos reis, e Senhor dos Senhores;
+16. O qual [é] o único a ter imortalidade, e habita em uma luz inacessível; a quem nenhum dos homens viu, nem pode ver; ao qual seja a honra, e poder para sempre, Amém.
+17. Manda aos ricos neste mundo, que não sejam soberbos, nem ponham [sua] confiança na incerteza das riquezas, mas sim no Deus vivo, que nos dá todas as coisas abundantemente, para [nossa] alegria.
+18. Que façam o bem, enriqueçam em boas obras, e compartilhem com boa vontade, [e] sejam bons distribuidores.
+19. Acumulando para si mesmos um bom fundamento para o futuro, para que possam obter a vida eterna.
+20. Timóteo, guarda o depósito [que foi] confiado [a ti], retirando-te de conversas vãs e profanas, e das oposições que falsamente são chamadas de conhecimento;
+21. Ao qual alguns, ao professarem, se desviaram da fé. A graça [seja] contigo. Amém.
+[A primeira carta a Timóteo foi escrita de Laodiceia, que é a principal cidade da Frígia Pacaciana].
+
