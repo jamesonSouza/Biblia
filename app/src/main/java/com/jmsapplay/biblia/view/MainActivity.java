@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity
     // Progress dialog type (0 - for Horizontal progress bar)
     public static final int progress_bar_type = 0;
 
-    // File url to download                     
+    // File url to download
     private static String file_url = "https://raw.githubusercontent.com/jamesonSouza/biblia/master/app/src/main/assets/";
     private static String textToShared = "";
     private static String strCapitulo = "";
