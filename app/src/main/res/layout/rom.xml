@@ -5,6 +5,6 @@
     android:padding="2dp"
     android:typeface="monospace"
     android:textSize="15dp"
-    android:textColor="@color/colorSS"
+    android:textColor="#6d3517"
     android:id="@+id/txtVersiculo">
 </TextView>

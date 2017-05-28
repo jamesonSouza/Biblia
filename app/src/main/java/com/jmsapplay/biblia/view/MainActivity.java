@@ -1,4 +1,4 @@
-package com.jmsapplay.biblia;
+package com.jmsapplay.biblia.view;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -7,12 +7,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -25,6 +27,7 @@ import android.view.MenuItem;
 
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -47,15 +50,20 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-import java.security.acl.Group;
 import java.util.ArrayList;
+import java.util.Random;
 
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.jmsapplay.biblia.R;
 import com.jmsapplay.biblia.model.Capitulo;
 import com.jmsapplay.biblia.model.Versiculo;
 
 
-
+import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
+import com.google.android.gms.ads.doubleclick.PublisherAdView;
+import com.google.android.gms.ads.MobileAds;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,14 +76,14 @@ public class MainActivity extends AppCompatActivity
     // Progress dialog type (0 - for Horizontal progress bar)
     public static final int progress_bar_type = 0;
 
-    // File url to download
-    private static String file_url = "https://raw.githubusercontent.com/geniltonmarcos/bibliasagradaapp/master/app/src/main/assets/";
+    // File url to download                     /*https://raw.githubusercontent.com/geniltonmarcos/bibliasagradaapp/master/app/src/main/assets/";*/
+    private static String file_url = "https://raw.githubusercontent.com/jamesonSouza/Biblia/master/app/src/main/java/com/jmsapplay/biblia/assets";
     private static String textToShared = "";
     private static String strCapitulo = "";
 
     private ListView lv = null;
     private String livro = "";
-    private String tituloLivro ="";
+    private String tituloLivro = "";
     private DrawerLayout drawer = null;
     private MenuItem MIShare = null;
     private ShareActionProvider mShareActionProvider;
@@ -84,22 +92,45 @@ public class MainActivity extends AppCompatActivity
 
     private ImageView ivLogo = null;
     private LinearLayout llStart = null;
+    private Button btnFrases;
+    private TextView txtPalavras;
+    String[] palavras = {
 
+    };
 
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        MobileAds.initialize(this, "ca-app-pub-9275202133724780~1832444752");
+       /* StartFragment startFragment = new StartFragment();
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.container_main_menu_ft, startFragment);
+        fragmentTransaction.commit();*/
+
+
+        // Anuncios metodos//
+
+        btnFrases = (Button) findViewById(R.id.btnPalavra);
+        txtPalavras = (TextView) findViewById(R.id.txtPalavras);
+
+       /* PublisherAdView mPublisherAdView = (PublisherAdView) findViewById(R.id.publisherAdView);
+        PublisherAdRequest adRequest = new PublisherAdRequest.Builder().build();
+        mPublisherAdView.loadAd(adRequest);*/
+        /*mAdView = (AdView) findViewById(R.id.AdView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);*/
 
         prepare();
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            //    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                   //     .setAction("Action", null).show();
+                //    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //     .setAction("Action", null).show();
             }
         });
 
@@ -113,45 +144,61 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+        btnFrases.setOnClickListener(new View.OnClickListener() {
+            // ArrayAdapter<String> aPalavras = new ArrayAdapter<String>(this,R.layout.content_main, palavras );
+            @Override
+            public void onClick(View v) {
+
+                String vpalavra = "";
+                Random random = new Random();
+                int numeroAll = random.nextInt(getPalavras().length);
+                txtPalavras.setText(getPalavras()[numeroAll]);
+
+
+            }
+        });
+
 
         lv = (ListView) findViewById(R.id.lvLivro);
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-        @Override
-        public boolean onItemLongClick(AdapterView<?> arg0, View rowView,
-        int pos, long id) {
-            // TODO Auto-generated method stub
+            @Override
+            public boolean onItemLongClick(AdapterView<?> arg0, View rowView,
+                                           int pos, long id) {
+                // TODO Auto-generated method stub
 
-            Log.v("long clicked","pos: " + pos);
+                Log.v("long clicked", "pos: " + pos);
 
-            TextView textView = (TextView) rowView.findViewById(R.id.txtVersiculo);
+                TextView textView = (TextView) rowView.findViewById(R.id.txtVersiculo);
 
 
-            if(textToShared.equals("")){
-                textToShared = livro.toUpperCase() + " - Cap.:" + strCapitulo + "\n\t";
+                if (textToShared.equals("")) {
+                    textToShared = livro.toUpperCase() + " - Cap.:" + strCapitulo + "\n\t";
+                }
+
+                textToShared += textView.getText().toString().trim() + "\n\t";
+
+                if (MIShare != null) if (!MIShare.isVisible()) MIShare.setVisible(true);
+
+                mensagemSelecionado();
+
+                return true;
             }
-
-            textToShared += textView.getText().toString().trim() + "\n\t";
-
-            if(MIShare != null) if(!MIShare.isVisible()) MIShare.setVisible(true);
-
-            mensagemSelecionado();
-
-            return true;
-        }
-    });
+        });
 
     }
 
 
-  /*  @Override
+    @Override
     public void onBackPressed() {
-        if(!backPressed){
+        if (!backPressed) {
             RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.content_main);
-            relativeLayout.setBackgroundResource(R.color.colorSS);
+            relativeLayout.setBackgroundResource(R.drawable.actibarperso);
 
             backPressed = true;
             livro = "";
-            if(MIShare != null) MIShare.setVisible(false);
+            limparVoltar();
+
+            if (MIShare != null) MIShare.setVisible(false);
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.rom, R.id.txtVersiculo, new String[]{""});
             lv.setAdapter(adapter);
 
@@ -166,7 +213,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }*/
+    }
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
@@ -195,20 +242,28 @@ public class MainActivity extends AppCompatActivity
         try {
 
             //shared
-            if(idCapitulo == R.id.menu_item_share){
+            if (idCapitulo == R.id.menu_item_share) {
                 prepareShareIntent();
             }
-            if(idCapitulo == R.id.menu_item_search){
+            if (idCapitulo == R.id.menu_item_search) {
                 pesquisaLivro();
             }
+            if (idCapitulo == R.id.sobre) {
 
-            else if (idCapitulo > 0) {
-                textToShared  ="";
+                AlertDialog.Builder builderSingle = new AlertDialog.Builder(MainActivity.this);
+                //builderSingle.setIcon(R.drawable.ic_menu_search);
+                builderSingle.setTitle("Sobre");
+                builderSingle.setMessage("JmsApplay \nVersion: Biblia 1.0");
+                builderSingle.setNeutralButton("Ok", null);
+                builderSingle.show();
+
+            } else if (idCapitulo > 0) {
+                textToShared = "";
                 ArrayList<String> lines = new ArrayList<String>();
                 for (Capitulo cap : capitulos) {
                     if (idCapitulo == cap.getCapitulo()) {
-                        strCapitulo =  idCapitulo+"";
-                        lines.add("Capítulo: " +idCapitulo);
+                        strCapitulo = idCapitulo + "";
+                        lines.add("Capítulo: " + idCapitulo);
                         for (Versiculo ver : capitulos.get(idCapitulo - 1).getVersiculos()) {
                             lines.add(ver.getTextoVersiculo());
                         }
@@ -221,7 +276,7 @@ public class MainActivity extends AppCompatActivity
                 return true;
             }
         } catch (Exception ex) {
-            Log.e("Erro: ",ex.getLocalizedMessage());
+            Log.e("Erro: ", ex.getLocalizedMessage());
         }
 
         return super.onOptionsItemSelected(item);
@@ -234,7 +289,7 @@ public class MainActivity extends AppCompatActivity
         try {
             //change background
             RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.content_main);
-           relativeLayout.setBackgroundResource(R.mipmap.bga);
+            relativeLayout.setBackgroundResource(R.color.colorfundo);
 
             int id = item.getItemId();
 
@@ -242,6 +297,9 @@ public class MainActivity extends AppCompatActivity
             if (id == R.id.menu_item_share) {
                 // Fetch and store ShareActionProvider
                 mShareActionProvider = (ShareActionProvider) item.getActionProvider();
+                StartFragment startFragment = new StartFragment();
+                startFragment.getActivity().getSupportFragmentManager().popBackStack();
+
 
             } else {
 
@@ -252,333 +310,338 @@ public class MainActivity extends AppCompatActivity
                 if (id == R.id.nav_genesis) {
                     livro = "genesis";
                     tituloLivro = "Genesis";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_exodo) {
                     livro = "exodo";
                     tituloLivro = "Exodo";
-                    setTitle("Biblia - " +tituloLivro);
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
 
                 } else if (id == R.id.nav_levitico) {
                     livro = "levitico";
                     tituloLivro = "Levitico";
-                    setTitle("Biblia - " +tituloLivro);
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
 
-                } else if(id == R.id.nav_deuteronomio) {
+                    btnFrases.setVisibility(View.INVISIBLE);
+                } else if (id == R.id.nav_deuteronomio) {
                     livro = "deuteronomio";
                     tituloLivro = "Deuteronomio";
-                    setTitle("Biblia - " +tituloLivro);
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
 
                 } else if (id == R.id.nav_numeros) {
                     livro = "numeros";
                     tituloLivro = "Numeros";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_josue) {
                     livro = "josue";
                     tituloLivro = "Josue";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_juizes) {
                     livro = "juizes";
                     tituloLivro = "Juizes";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_rute) {
                     livro = "rute";
                     tituloLivro = "Rute";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_isamuel) {
                     livro = "isamuel";
                     tituloLivro = "I Samuel";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iisamuel) {
                     livro = "iisamuel";
                     tituloLivro = "II Samuel";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ireis) {
                     livro = "ireis";
                     tituloLivro = "I Reis";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iireis) {
                     livro = "iireis";
                     tituloLivro = "II Reis";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_icronicas) {
                     livro = "icronicas";
                     tituloLivro = "I Cronicas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iicronicas) {
                     livro = "iicronicas";
                     tituloLivro = "II Cronicas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_esdras) {
                     livro = "esdras";
                     tituloLivro = "Esdras";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_neemias) {
                     livro = "neemias";
                     tituloLivro = "Neemias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ester) {
                     livro = "ester";
                     tituloLivro = "Ester";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_jo) {
                     livro = "jo";
                     tituloLivro = "Jo";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_salmos) {
                     livro = "salmos";
                     tituloLivro = "Salmos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_proverbios) {
                     livro = "proverbios";
                     tituloLivro = "Proverbios";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_eclesiastes) {
                     livro = "eclesiastes";
                     tituloLivro = "Proverbios";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_canticos) {
                     livro = "canticosdoscanticos";
                     tituloLivro = "Canticos dos canticos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_isaias) {
                     livro = "isaias";
                     tituloLivro = "Isaias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_jeremias) {
                     livro = "jeremias";
                     tituloLivro = "Jeremias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_lamentacoes) {
                     livro = "lamentacoes";
                     tituloLivro = "Lamentacoes";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ezequiel) {
                     livro = "ezequiel";
                     tituloLivro = "Ezequiel";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_daniel) {
                     livro = "daniel";
                     tituloLivro = "Daniel";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_oseias) {
                     livro = "oseias";
                     tituloLivro = "Oseias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_joel) {
                     livro = "joel";
                     tituloLivro = "Joel";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_obadias) {
                     livro = "obadias";
                     tituloLivro = "Obadias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_jonas) {
                     livro = "jonas";
                     tituloLivro = "Jonas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_miqueias) {
                     livro = "miqueias";
                     tituloLivro = "Miqueias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_naum) {
                     livro = "naum";
                     tituloLivro = "Naum";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_habacuque) {
                     livro = "habacuque";
                     tituloLivro = "Habacuque";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_sofonias) {
                     livro = "sofonias";
                     tituloLivro = "Sofonias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ageu) {
                     livro = "ageu";
                     tituloLivro = "Ageu";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_zacarias) {
                     livro = "zacarias";
                     tituloLivro = "Zacarias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_malaquias) {
                     livro = "malaquias";
                     tituloLivro = "Zalaquias";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_amos) {
                     livro = "amos";
                     tituloLivro = "Amos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_mateus) {
                     livro = "mateus";
                     tituloLivro = "Mateus";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_marcos) {
                     livro = "marcos";
                     tituloLivro = "Marcos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_lucas) {
                     livro = "lucas";
                     tituloLivro = "Lucas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_joao) {
                     livro = "joao";
                     tituloLivro = "Joao";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_atos) {
                     livro = "atos";
                     tituloLivro = "Atos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_romanos) {
                     livro = "romanos";
                     tituloLivro = "Romanos";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_icorintios) {
                     livro = "icorintios";
                     tituloLivro = "I Corintios";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iicorintios) {
                     livro = "iicorintios";
                     tituloLivro = "II Corintios";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_galatas) {
                     livro = "galatas";
                     tituloLivro = "Galatas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_efesios) {
                     livro = "efesios";
                     tituloLivro = "Efesios";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_filipenses) {
                     livro = "filipenses";
                     tituloLivro = "Filipenses";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_colossenses) {
                     livro = "colossenses";
                     tituloLivro = "Colossenses";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_itessalonicenses) {
                     livro = "itessalonicenses";
                     tituloLivro = "I Tessalonicenses";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iitessalonicenses) {
                     livro = "iitessalonicenses";
                     tituloLivro = "II Tessalonicenses";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_itimoteo) {
                     livro = "itimoteo";
                     tituloLivro = "I Timoteo";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iitimoteo) {
                     livro = "iitimoteo";
                     tituloLivro = "II Timoteo";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_tito) {
                     livro = "tito";
                     tituloLivro = "Tito";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_filemom) {
                     livro = "filemom";
                     tituloLivro = "Filemom";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_hebreus) {
                     livro = "hebreus";
                     tituloLivro = "Hebreus";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_tiago) {
                     livro = "tiago";
                     tituloLivro = "Tiago";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ipedro) {
                     livro = "ipedro";
                     tituloLivro = "I Pedro";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iipedro) {
                     livro = "iipedro";
                     tituloLivro = "II Pedro";
 
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_ijoao) {
                     livro = "ijoao";
                     tituloLivro = "I Joao";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iijoao) {
                     livro = "iijoao";
                     tituloLivro = "II Joao";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_iiijoao) {
                     livro = "iiijoao";
                     tituloLivro = "III Joao";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_judas) {
                     livro = "judas";
                     tituloLivro = "Judas";
-                    setTitle("Biblia - " +tituloLivro);
-
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 } else if (id == R.id.nav_apocalipse) {
                     livro = "apocalipse";
                     tituloLivro = "Apocalipse";
-                    setTitle("Biblia - " +tituloLivro);
+                    setTitle("Biblia - " + tituloLivro);
+                    limpar();
                 }
 
 
@@ -610,7 +673,7 @@ public class MainActivity extends AppCompatActivity
 */
     @Override
     protected Dialog onCreateDialog(int id) {
-        if(PanelDialog) {
+        if (PanelDialog) {
             switch (id) {
                 case progress_bar_type: // we set this to 0
                     pDialog = new ProgressDialog(this);
@@ -625,20 +688,21 @@ public class MainActivity extends AppCompatActivity
                 default:
                     return null;
             }
-        } return null;
+        }
+        return null;
     }
-        // fim dowloand
+    // fim dowloand
 
 
-
-    private void cleanSharedItem(){
+    private void cleanSharedItem() {
         textToShared = "";
     }
+
     // Gets the image URI and setup the associated share intent to hook into the provider
     public void prepareShareIntent() {
 
         if (textToShared.isEmpty()) {
-            Toast.makeText(this,"Selecione um texto para compartihar", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Selecione um texto para compartihar", Toast.LENGTH_SHORT).show();
         } else {
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
@@ -655,7 +719,8 @@ public class MainActivity extends AppCompatActivity
             BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8"), 100);
             int idVersiculo = 1, idCapitulo = 1;
 
-            Capitulo capitulo = null; Versiculo versiculo = null;
+            Capitulo capitulo = null;
+            Versiculo versiculo = null;
 
             String line;
             while ((line = br.readLine()) != null) {
@@ -687,10 +752,10 @@ public class MainActivity extends AppCompatActivity
                 }
             }
 
-            if (capitulo != null){
+            if (capitulo != null) {
 
                 capitulos.add(capitulo);
-                strCapitulo = ""+ idCapitulo;
+                strCapitulo = "" + idCapitulo;
             }
 
             br.close();
@@ -701,12 +766,13 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void insereMenuItemShare(Menu menu){
-        menu.add(0,R.id.menu_item_share,0,"").setIcon(R.drawable.ic_menu_share)
+    private void insereMenuItemShare(Menu menu) {
+        menu.add(0, R.id.menu_item_share, 0, "").setIcon(R.drawable.ic_menu_share)
                 .setVisible(false)
                 .setTitle("Enviar")
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
     }
+
     private void insereCapitulos(int qtdeCap, Menu menu) {
 
         for (int i = 1; i <= qtdeCap; i++) {
@@ -935,8 +1001,8 @@ public class MainActivity extends AppCompatActivity
 
             if (file.listFiles().length < 66) {
 
-                if(!isOnline()){
-                    Toast.makeText(this,"Primo acesso ao aplicativo presica de acesso a internet para baixar a biblia.",Toast.LENGTH_LONG).show();
+                if (!isOnline()) {
+                    Toast.makeText(this, "Primeiro acesso ao aplicativo presica de acesso a internet para baixar a biblia.", Toast.LENGTH_LONG).show();
                     return;
                 }
                 new DownloadFileFromURL().execute(file_url);
@@ -951,8 +1017,8 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void mensagemSelecionado(){
-        Toast.makeText(this,"Selecionado!", Toast.LENGTH_SHORT).show();
+    private void mensagemSelecionado() {
+        Toast.makeText(this, "Selecionado!", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -963,7 +1029,7 @@ public class MainActivity extends AppCompatActivity
         return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 
-    public void pesquisaLivro(){
+    public void pesquisaLivro() {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(MainActivity.this);
         //builderSingle.setIcon(R.drawable.ic_menu_search);
         builderSingle.setTitle("Informe o texto:");
@@ -1033,8 +1099,8 @@ public class MainActivity extends AppCompatActivity
                     if (!line.isEmpty()) {
                         if (line.startsWith("»")) {
                             capitulo = livroInPesquisa + " - " + idVersiculo + " - " + idCapitulo + " - " + line.replace("[", "").replace("]", "").replace("»", "");
-                            idCapitulo ++;
-                        } else if(line.indexOf(texto) > -1){
+                            idCapitulo++;
+                        } else if (line.indexOf(texto) > -1) {
                             resultadosEncontrados.add(capitulo + line);
                             /*if (capitulo != null) {
                                 versiculo = new Versiculo();
@@ -1047,16 +1113,16 @@ public class MainActivity extends AppCompatActivity
                         }
                     }
 
-                    if(resultadosEncontrados.size() == 10){
+                    if (resultadosEncontrados.size() == 10) {
                         break;
                     }
                 }
                 br.close();
-            }catch(Exception e){
+            } catch (Exception e) {
                 Toast.makeText(this, "Erro ao abrir o livro. Se o erro persistir, reinicie o app e tente novamente.", Toast.LENGTH_SHORT).show();
             }
 
-            if(resultadosEncontrados.size() == 10){
+            if (resultadosEncontrados.size() == 10) {
                 break;
             }
         }
@@ -1065,79 +1131,80 @@ public class MainActivity extends AppCompatActivity
         lv.setAdapter(adapter);
     }
 
-class DownloadFileFromURL extends AsyncTask<String, String, String> {
 
-    /**
-     * Before starting background thread
-     * Show Progress Bar Dialog
-     */
-    @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-        showDialog(progress_bar_type);
-    }
+    class DownloadFileFromURL extends AsyncTask<String, String, String> {
 
-    /**
-     * Downloading file in background thread
-     */
-    @Override
-    protected String doInBackground(String... f_url) {
-        int count = 0;
-        try {
-            for (String book : getLivros()) {
-
-                book += ".txt";
-
-                File txtToWrite = new File(getExternalCacheDir(), "BibliaSagrada/" + book);//new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/BibliaSagrada/" + book);
-                FileWriter writer = new FileWriter(txtToWrite);
-
-                URL url = new URL(f_url[0] + "/" + book);
-                URLConnection conection = url.openConnection();
-                conection.connect();
-
-                // download the file
-                InputStream input = new BufferedInputStream(url.openStream(), 8192);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
-
-
-                String str;
-                while ((str = reader.readLine()) != null) {
-                    writer.write(str + "\n\t");
-                }
-                reader.close();
-
-                writer.flush();
-                writer.close();
-
-                count++;
-                publishProgress("" + count);
-            }
-        } catch (Exception e) {
-            Log.e("Error: ", e.getMessage());
+        /**
+         * Before starting background thread
+         * Show Progress Bar Dialog
+         */
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            showDialog(progress_bar_type);
         }
 
-        return null;
-    }
+        /**
+         * Downloading file in background thread
+         */
+        @Override
+        protected String doInBackground(String... f_url) {
+            int count = 0;
+            try {
+                for (String book : getLivros()) {
 
-    /**
-     * Updating progress bar
-     */
-    protected void onProgressUpdate(String... progress) {
-        // setting progress percentage
-        pDialog.setProgress(Integer.parseInt(progress[0]));
-    }
+                    book += ".txt";
 
-    /**
-     * After completing background task
-     * Dismiss the progress dialog
-     **/
-    @Override
-    protected void onPostExecute(String file_url) {
-        // dismiss the dialog after the file was downloaded
-        dismissDialog(progress_bar_type);
-    }
+                    File txtToWrite = new File(getExternalCacheDir(), "BibliaSagrada/" + book);//new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/BibliaSagrada/" + book);
+                    FileWriter writer = new FileWriter(txtToWrite);
 
-}
+                    URL url = new URL(f_url[0] + "/" + book);
+                    URLConnection conection = url.openConnection();
+                    conection.connect();
+
+                    // download the file
+                    InputStream input = new BufferedInputStream(url.openStream(), 8192);
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
+
+
+                    String str;
+                    while ((str = reader.readLine()) != null) {
+                        writer.write(str + "\n\t");
+                    }
+                    reader.close();
+
+                    writer.flush();
+                    writer.close();
+
+                    count++;
+                    publishProgress("" + count);
+                }
+            } catch (Exception e) {
+                Log.e("Error: ", e.getMessage());
+            }
+
+            return null;
+        }
+
+        /**
+         * Updating progress bar
+         */
+        protected void onProgressUpdate(String... progress) {
+            // setting progress percentage
+            pDialog.setProgress(Integer.parseInt(progress[0]));
+        }
+
+        /**
+         * After completing background task
+         * Dismiss the progress dialog
+         **/
+        @Override
+        protected void onPostExecute(String file_url) {
+            // dismiss the dialog after the file was downloaded
+            dismissDialog(progress_bar_type);
+        }
+
+    }
 
     private String[] Livros;
 
@@ -1210,8 +1277,92 @@ class DownloadFileFromURL extends AsyncTask<String, String, String> {
                 "judas",
                 "apocalipse"
 
-
         };
+
+    }
+        String[] Palavras;
+        public String[] getPalavras() {
+            return new String[]{
+                    "Genesis",
+                    "Exodo",
+                    "Levitico",
+                    "Numeros",
+                    "Deuteronomio",
+                    "Josue",
+                    "Juizes",
+                    "Rute",
+                    "Isamuel",
+                    "II samuel",
+                    "I Reis",
+                    "II reis",
+                    "I Cronicas",
+                    "II Cronicas",
+                    "Esdras",
+                    "Neemias",
+                    "Ester",
+                    "Jo",
+                    "Salmos",
+                    "Proverbios",
+                    "Eclesiastes",
+                    "Canticosdoscanticos",
+                    "Isaias",
+                    "Jeremias",
+                    "Lamentacoes",
+                    "Ezequiel",
+                    "Daniel",
+                    "Oseias",
+                    "Joel",
+                    "Obadias",
+                    "Jonas",
+                    "Miqueias",
+                    "Naum",
+                    "Habacuque",
+                    "Sofonias",
+                    "Ageu",
+                    "Zacarias",
+                    "Amos",
+                    "Malaquias",
+                    "Mateus",
+                    "Marcos",
+                    "Lucas",
+                    "Joao",
+                    "Atos",
+                    "Romanos",
+                    "I Corintios",
+                    "II Corintios",
+                    "Galatas",
+                    "Efesios",
+                    "Filipenses",
+                    "Colossenses",
+                    "I Tessalonicenses",
+                    "II Tessalonicenses",
+                    "I Timoteo",
+                    "II Timoteo",
+                    "Tito",
+                    "Filemom",
+                    "Hebreus",
+                    "Tiago",
+                    "I Pedro",
+                    "II Pedro",
+                    "I Joao",
+                    "II Joao",
+                    "III Joao",
+                    "Judas",
+                    "Apocalipse"
+
+
+            };
+        }
+
+    private  void limpar(){
+
+        txtPalavras.setVisibility(View.INVISIBLE);
+        btnFrases.setVisibility(View.INVISIBLE);
+    }
+    private  void limparVoltar(){
+
+        txtPalavras.setVisibility(View.VISIBLE);
+        btnFrases.setVisibility(View.VISIBLE);
     }
 
 

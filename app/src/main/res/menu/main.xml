@@ -10,7 +10,7 @@
     <item
         android:id="@+id/menu_item_search"
         app:showAsAction="always"
-        android:icon="@drawable/ic_menu_send"
+        android:icon="@drawable/ic_menu_search"
         android:title="Pesquisar" />
     <item
         android:id="@+id/menu_item_share"
@@ -19,4 +19,12 @@
         android:title="Enviar"
         android:visible="false"
         android:actionProviderClass="android.widget.ShareActionProvider" />
+
+    <item
+        android:title="Sobre"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:id="@+id/sobre">
+
+    </item>
 </menu>

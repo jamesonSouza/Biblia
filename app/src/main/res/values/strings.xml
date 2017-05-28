@@ -75,4 +75,12 @@
     <string name="iiijoao">III João</string>
     <string name="judas">Judas</string>
     <string name="apocalipse">Apocalipse</string>
+    <string name="powered_by">Powered by JmsPlay</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- string do bloco de anucio oficial      ca-app-pub-9275202133724780/3309177954    -->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="lbl_palavra_dia">Leia hoje</string>
 </resources>
